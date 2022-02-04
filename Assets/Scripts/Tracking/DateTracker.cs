@@ -6,6 +6,7 @@ using UnityEngine;
 [System.Serializable]
 public class DateTracker
 {
+    public Calander calander;
     protected List<MonthSettingsNode> poolMonthSettingsList = new List<MonthSettingsNode>();
 
     public List<MonthSettingsNode> PoolMonthSettingsList
@@ -34,6 +35,7 @@ public class DateTracker
             if (Date.month.nextMonth == poolMonthSettingsList[0])
             {
                 Date.year++;
+                calander.DisplayDate();
             }
             Date.month = Date.month.nextMonth;
         }
@@ -49,10 +51,12 @@ public class DateTracker
                 {
                     TickNextMonth();
                     Date.day = 1;
+                    calander.DisplayDate();
                 }
                 else
                 {
                     Date.day++;
+                    calander.DisplayDate();
                 }
             }
             
@@ -62,6 +66,7 @@ public class DateTracker
     public void TickNextYear()
     {
         Date.year += 1;
+        calander.DisplayDate();
     }
 
 }

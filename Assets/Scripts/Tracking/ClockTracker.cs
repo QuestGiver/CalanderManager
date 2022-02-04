@@ -28,6 +28,12 @@ public class ClockTracker : MonoBehaviour
         DisplayClock();
     }
 
+    public void SetClock()
+    {
+        Clock.ZeroOut();
+        ProcessClockInput();
+    }
+
     public void ProcessClockInput()
     {
         addSeconds(int.Parse(SecondsInput.text));

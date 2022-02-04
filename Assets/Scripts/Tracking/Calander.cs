@@ -23,6 +23,7 @@ public class Calander : MonoBehaviour
     {
         dateTracker = new DateTracker();
         dateTracker.PoolMonthSettingsList = new List<MonthSettingsNode>();
+        dateTracker.calander = this;
     }
 
     public void LoadSaveDate(UserCalanderData _userCalanderData)
@@ -41,7 +42,7 @@ public class Calander : MonoBehaviour
         DisplayMonths();
     }
 
-    void DisplayDate()
+    public void DisplayDate()
     {
         DateDisplay.text = Date.month.numericPlacement + "/" + Date.day + "/" + Date.year;
     }

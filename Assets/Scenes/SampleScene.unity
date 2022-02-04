@@ -2736,6 +2736,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c1936c3ce0d3d4396273944c01baf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dateTracker:
+    calander: {fileID: 0}
   DateDisplay: {fileID: 692004562}
   MonthsDisplay: {fileID: 1461935660}
   ErrorDisplay: {fileID: 879188969}
@@ -2874,7 +2876,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 608762668}
         m_TargetAssemblyTypeName: ClockTracker, Assembly-CSharp
-        m_MethodName: ProcessClockInput
+        m_MethodName: SetClock
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
